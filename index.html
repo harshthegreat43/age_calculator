@@ -91,17 +91,17 @@
                 const day = document.getElementById('day');
                 const text = document.getElementById('text');
                 text.style.display = 'block';
-                if(years==0){
+                if(years>0){
+                    year.innerHTML = years;
+                    day.innerHTML = days;
+                }else if(years<0){
+                    text.innerHTML = "Really!!! Have you even born dear ?";
+                }else{
                     if(days<=1){
                     text.innerHTML = "Your age is " + days + " day.";
                     }else{
                     text.innerHTML = "Your age is " + days + " days.";
                     }
-                }else if(years<0){
-                    text.innerHTML = "Really!!! Have you even born dear ?";
-                }else{
-                    year.innerHTML = years;
-                    day.innerHTML = days;
                 }
             }
         }
